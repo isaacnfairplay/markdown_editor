@@ -1,0 +1,166 @@
+/* static/css/styles.css */
+
+/* Existing styles (abbreviated) */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#editor-container {
+    display: inline-block;
+    width: 90%;
+    vertical-align: top;
+    margin-right: 1%;
+}
+
+#editor {
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 10px;
+    resize: vertical;
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid #ccc;
+}
+
+/* New popup styles */
+.popup {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background-color: var(--bg-color, #fff);
+    color: var(--text-color, #000);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 50px; /* Initial position */
+    left: 50%;
+}
+
+body.dark-mode .popup {
+    background-color: #444;
+    color: #fff;
+    border-color: #666;
+}
+
+.popup-header {
+    background-color: #ddd;
+    padding: 5px;
+    cursor: move;
+    user-select: none;
+    border-bottom: 1px solid #ccc;
+}
+
+body.dark-mode .popup-header {
+    background-color: #555;
+    border-bottom-color: #777;
+}
+
+.popup-content {
+    padding: 10px;
+    height: calc(100% - 30px); /* Adjust for header height */
+    overflow-y: auto;
+}
+
+/* Theme toggle button (unchanged) */
+#theme-toggle {
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+/* static/css/styles.css (add to existing file) */
+#editor-section {
+    width: 100%;
+}
+
+#doc-title {
+    width: 70%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: inherit;
+    color: inherit;
+    border: 1px solid #ccc;
+}
+
+#save-button {
+    width: 25%;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+#toc-container {
+    margin-top: 10px;
+}
+
+#toc-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#toc-list li {
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+#toc-list li:hover {
+    background-color: #eee;
+}
+
+body.dark-mode #toc-list li:hover {
+    background-color: #444;
+}
+
+#versions-container {
+    margin-top: 10px;
+}
+
+#versions-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#versions-list li {
+    padding: 5px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+#versions-list li:hover {
+    background-color: #eee;
+}
+
+body.dark-mode #versions-list li {
+    border-bottom: 1px solid #555;
+}
+
+body.dark-mode #versions-list li:hover {
+    background-color: #444;
+}
+
+/* Add to static/css/styles.css */
+#export-button, #import-button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background-color: var(--bg-color, #ddd);
+    color: var(--text-color, #000);
+    border: 1px solid var(--text-color, #ccc);
+    cursor: pointer;
+}
+
+body.dark-mode #export-button, body.dark-mode #import-button {
+    background-color: #555;
+    color: #fff;
+    border-color: #666;
+}
+
+#export-button:hover, #import-button:hover {
+    opacity: 0.8;
+}

@@ -1,0 +1,14 @@
+<!-- static/html/editor.html -->
+<form id="save-form">
+    <input type="text" id="doc-title" placeholder="Document Title">
+    <button type="button" id="save-button">Save</button>
+    <button type="button" id="export-button">Export</button>
+    <input type="file" id="import-file" style="display: none;" accept=".json">
+    <button type="button" id="import-button">Import</button>
+</form>
+<textarea id="editor" placeholder="Write your Markdown here..."></textarea>
+<div id="versions-container">
+    <h3>Versions</h3>
+    <ul id="versions-list"></ul>
+</div>
+<ul id="toc"></ul>
